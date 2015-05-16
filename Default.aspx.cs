@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-private static int count = 1; 
 
 public partial class _Default : System.Web.UI.Page
 {
+
+    private static int count = 1; 
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -18,7 +19,7 @@ public partial class _Default : System.Web.UI.Page
             onlineNum.Text = "我是假的 特码：1 = 100元， 4 = 500 元， 7 = 100元，69 = 10元";
         }
         else{
-            onlineNum.Text = "我是假的 特码：1 = 100元， 4 = 500 元，2 = 100000000000元，7 = 100元，69 = 10元";
+            onlineNum.Text = "我是假的 特码：1 = 100元， 4 = 500 元，2 = 100000000元，7 = 100元，69 = 10元";
         }
         count = count % 2;
     }
