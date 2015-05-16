@@ -10,7 +10,12 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        //Application["UserCount"].ToString();
-        onlineNum.Text = "什么傻帽";
+        if (Application["UserCount"] % 2 == 0 ) 
+        {
+            onlineNum.Text = "什么傻帽";
+        }
+        else{
+            onlineNum.Text = "什么傻帽2";
+        }
     }
 }
