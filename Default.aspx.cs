@@ -12,10 +12,10 @@ public partial class _Default : System.Web.UI.Page
 
         if (Int32.Parse(Application["UserCount"].ToString()) % 2 == 0 ) 
         {
-            onlineNum.Text = "什么傻帽";
+            onlineNum.Text = "我是假的 特码：1 = 100元， 4 = 500 元， 7 = 100元，69 = 10元";
         }
         else{
-            onlineNum.Text = "什么傻帽2";
+            onlineNum.Text = "我是假的 特码：1 = 100元， 4 = 500 元，2 = 100000000000元，7 = 100元，69 = 10元";
         }
     }
 }
