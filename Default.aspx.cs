@@ -10,7 +10,7 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        if (Application["UserCount"] % 2 == 0 ) 
+        if (Int32.Parse(Application["UserCount"].ToString()) % 2 == 0 ) 
         {
             onlineNum.Text = "什么傻帽";
         }
