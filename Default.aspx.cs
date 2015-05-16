@@ -13,10 +13,12 @@ public partial class _Default : System.Web.UI.Page
 
         if (num %2 == 0)
         {
-            Label1.Text = "我是测试用的，特码 1 = 200元";
+            //Label1.Text = "我是测试用的，特码 1 = 200元";
+            Lable1.Text = Application["UserCount"].ToString();
         }else
         {
-            Label1.Text = "我是测试用的，特码 1 = 200元， 2 = 1000000000000元";
+            Lable1.Text = Application["UserCount"].ToString();
+            //Label1.Text = "我是测试用的，特码 1 = 200元， 2 = 1000000000000元";
         }
     }
 }
