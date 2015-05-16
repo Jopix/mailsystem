@@ -9,6 +9,11 @@
         Application.Lock();
         Application["UserCount"] = 0;
         Application.UnLock();
+
+        Application.Lock();
+        Application["StatCount"] = 0;
+        Application.UnLock();
+
     }
     
     void Application_End(object sender, EventArgs e) 
@@ -30,6 +35,10 @@
         Application["UserCount"] = Int32.Parse(Application["UserCount"].ToString()) + 1;
         Application.UnLock();
 
+        Application.Lock();
+        Application["StatCount"] = int.Parse(Application["StatCount"].ToString()) + 1;
+        Application.UnLock();
+
     }
 
     void Session_End(object sender, EventArgs e) 
@@ -38,6 +47,9 @@
         // 注意: 只有在 Web.config 文件中的 sessionstate 模式设置为
         // InProc 时，才会引发 Session_End 事件。如果会话模式设置为 StateServer
         // 或 SQLServer，则不引发该事件。
+        Application.Lock();
+        Application["UserCount"] = Int32.Parse(Application["UserCount"].ToString()) - 1;
+        Application.UnLock();
     }
        
 </script>

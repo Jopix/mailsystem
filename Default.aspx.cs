@@ -9,16 +9,20 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        int num = Application["UserCount"] = Int32.Parse(Application["UserCount"].ToString());
 
-        if (num %2 == 0)
+        onlineNum.Text = Application["UserCount"].ToString();
+        statNum.Text = Application["StatCount"].ToString();
+
+        for (int i = 1; i < 10; i++)
         {
-            //Label1.Text = "我是测试用的，特码 1 = 200元";
-            onlineNum.Text = Application["UserCount"].ToString();
-        }else
-        {
-            Lable1.Text = Application["UserCount"].ToString();
-            //Label1.Text = "我是测试用的，特码 1 = 200元， 2 = 1000000000000元";
+            TableRow Row = new TableRow();
+            for (int j = 1; j < 10; j++)//9列
+            {
+                TableCell Cell = new TableCell();
+                Cell.Text = i.ToString() + " * " + j.ToString() + " = " + (i * j).ToString();
+                Row.Cells.Add(Cell);
+            }
+            Table1.Rows.Add(Row);
         }
     }
 }
