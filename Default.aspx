@@ -82,7 +82,7 @@
 <body>
     <div>
         <div data-role="content" id="cc">
-            <span id="Label1" style="font-size:18px;">  </span>
+            <asp:Label runat="server" ID="Label1"></asp:Label>
         </div>
     </div>
 </body>
