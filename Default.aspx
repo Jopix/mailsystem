@@ -18,8 +18,6 @@
        
   <body>
     <div style="padding:10px 10px 10px 100px"> 
-    <p>一下数据就是登录我这个网站的在线人数了。</p>
-       <asp:Label ID="Label1" runat="server">当前在线人数: </asp:Label> <br />
       <asp:Label runat="server" ID="onlineNum"></asp:Label> <br />
     </div>
     <script src="src/js/jquery.js"></script>
